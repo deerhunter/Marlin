@@ -109,7 +109,7 @@
 #define DELTA_DIAGONAL_ROD 240.0 // mm Это правильное значение
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 128.0 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 146.47 // По калькулятору https://github.com/Jaydmdigital/Kossel_2020/tree/master/mk_visual_calc2020
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 19.5 // mm Похоже, что это правильное значение
