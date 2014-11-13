@@ -318,12 +318,12 @@
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-const bool X_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Y_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool X_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Y_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool X_MIN_ENDSTOP_INVERTING = true; // Не используется.
+const bool Y_MIN_ENDSTOP_INVERTING = true; // Не используется.
+const bool Z_MIN_ENDSTOP_INVERTING = true; // Не используется.
+const bool X_MAX_ENDSTOP_INVERTING = true; // M119 - Output Endstop status to serial port Можно использовать для проверки статуса.
+const bool Y_MAX_ENDSTOP_INVERTING = true; // M119.
+const bool Z_MAX_ENDSTOP_INVERTING = true; // M119
 //#define DISABLE_MAX_ENDSTOPS
 //#define DISABLE_MIN_ENDSTOPS
 
@@ -347,8 +347,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR false    // for Mendel set to false, for Orca set to true
-#define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
-#define INVERT_E1_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E0_DIR true   // У меня пока директ драйв, так что инвертим.
+#define INVERT_E1_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 
 // ENDSTOP SETTINGS:
@@ -373,7 +373,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define Z_MAX_LENGTH (Z_MAX_POS - Z_MIN_POS)
 //============================= Bed Auto Leveling ===========================
 
-//#define ENABLE_AUTO_BED_LEVELING // Delete the comment to enable (remove // at the start of the line)
+//#define ENABLE_AUTO_BED_LEVELING // Как настроишь авокалибровку, разкомментируй строку
 
 #ifdef ENABLE_AUTO_BED_LEVELING
 
@@ -457,10 +457,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define XYZ_FULL_STEPS_PER_ROTATION 200 //Это надо посмотреть - не знаю количество зубов и микрошагов, а также скорость на оборот
-#define XYZ_MICROSTEPS 16
-#define XYZ_BELT_PITCH 5
-#define XYZ_PULLEY_TEETH 17
+#define XYZ_FULL_STEPS_PER_ROTATION 200 // Правильно
+#define XYZ_MICROSTEPS 16 // Правильно
+#define XYZ_BELT_PITCH 5 // Правильно
+#define XYZ_PULLEY_TEETH 17 //Это посмотри в прошивке, которая сейчас залита !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #define XYZ_STEPS (XYZ_FULL_STEPS_PER_ROTATION * XYZ_MICROSTEPS / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 100}
