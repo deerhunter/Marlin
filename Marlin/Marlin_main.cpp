@@ -3282,6 +3282,7 @@ void calculate_delta(float cartesian[3])
 }
 
 // Adjust print surface height by linear interpolation over the bed_level array.
+#ifdef NONLINEAR_BED_LEVELING
 void adjust_delta(float cartesian[3])
 {
   int half = (ACCURATE_BED_LEVELING_POINTS - 1) / 2;
@@ -3319,7 +3320,7 @@ void adjust_delta(float cartesian[3])
   SERIAL_ECHOPGM(" offset="); SERIAL_ECHOLN(offset);
   */
 }
-
+#endif
 void prepare_move_raw()
 {
   previous_millis_cmd = millis();
