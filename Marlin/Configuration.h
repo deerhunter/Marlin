@@ -424,7 +424,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // M119
 
   // with accurate bed leveling, the bed is sampled in a ACCURATE_BED_LEVELING_POINTSxACCURATE_BED_LEVELING_POINTS grid and least squares solution is calculated
   // Note: this feature occupies 10'206 byte
- //#define ACCURATE_BED_LEVELING //Закомментировал строку про акуратную калибровку
+#define ACCURATE_BED_LEVELING //раскомментировал строку про акуратную калибровку
 
   #ifdef ACCURATE_BED_LEVELING
     #define ACCURATE_BED_LEVELING_POINTS 7
